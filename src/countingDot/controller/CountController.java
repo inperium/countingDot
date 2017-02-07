@@ -36,6 +36,7 @@ public class CountController {
 		}
 		
 		timer.stopTimer();
+		timer.resetTimer();
 		
 		return factorialInfo;
 	}
@@ -53,6 +54,7 @@ public class CountController {
 		}
 		
 		timer.stopTimer();
+		timer.resetTimer();
 		
 		return factorialInfo;
 	}
@@ -72,6 +74,7 @@ public class CountController {
 		}
 		
 		timer.stopTimer();
+		timer.resetTimer();
 		
 		return factorialInfo;
 	}
