@@ -39,10 +39,30 @@ public class CountController {
 		
 		return factorialInfo;
 	}
+	// Iterative Fibbinacci Method
 	
 	public String transferFibinacci(String input)
 	{
-		String factorialInfo = "The factorial " + input + " is ";
+		String factorialInfo = "The fibinacci " + input + " is ";
+		
+		timer.startTimer();
+		
+		if(isValid(input))
+		{
+			factorialInfo += recursionTool.fibonacciIteration(Integer.parseInt(input));
+		}
+		
+		timer.stopTimer();
+		
+		return factorialInfo;
+	}
+	
+	// Recursive Fibbinacci Method
+	
+	/*
+	public String transferFibinacci(String input)
+	{
+		String factorialInfo = "The fibinacci " + input + " is ";
 		
 		timer.startTimer();
 		
@@ -55,6 +75,7 @@ public class CountController {
 		
 		return factorialInfo;
 	}
+	*/
 	
 	private boolean isValid(String testValue)
 	{
