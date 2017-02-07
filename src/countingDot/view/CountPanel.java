@@ -50,6 +50,15 @@ public class CountPanel extends JPanel {
 				}
 			}
 		);
+		
+		fibButton.addActionListener(new ActionListener()
+		{
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				textArea.setText(baseController.transferFibinacci(textField.getText()));
+			}
+		}
+	);
 	}
 
 	private void setupLayout() {

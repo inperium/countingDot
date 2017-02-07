@@ -9,9 +9,11 @@ public class CountController {
 	//Declaration
 	private RecursionTool recursionTool;
 	private CountFrame countFrame;
+	private Timer timer;
 	
 	//Constructor
 	public CountController() {
+		this.timer = new Timer();
 		this.recursionTool = new RecursionTool();
 		countFrame = new CountFrame(this);
 	}
@@ -26,10 +28,30 @@ public class CountController {
 	{
 		String factorialInfo = "The factorial " + input + " is ";
 		
+		timer.startTimer();
+		
 		if(isValid(input))
 		{
 			factorialInfo += recursionTool.calculateFactorial(Integer.parseInt(input));
 		}
+		
+		timer.stopTimer();
+		
+		return factorialInfo;
+	}
+	
+	public String transferFibinacci(String input)
+	{
+		String factorialInfo = "The factorial " + input + " is ";
+		
+		timer.startTimer();
+		
+		if(isValid(input))
+		{
+			factorialInfo += recursionTool.calculateFibonacci(Integer.parseInt(input));
+		}
+		
+		timer.stopTimer();
 		
 		return factorialInfo;
 	}
