@@ -18,7 +18,8 @@ public class Timer {
 	public void stopTimer()
 	{
 		executionTime = System.nanoTime() - executionTime;
-		System.out.println((executionTime/1000000000));
+		String printTime = "The method took " + (double)(executionTime/100000000) + " seconds.";
+		System.out.println((printTime));
 	}
 	public String toString()
 	{

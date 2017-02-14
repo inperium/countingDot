@@ -20,7 +20,7 @@ public class CountController {
 	
 	//Start Method
 	public void start() {
-		
+
 	}
 
 	//Methods
